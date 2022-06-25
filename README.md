@@ -1,30 +1,47 @@
-# Fitting Binomial Distribution
-## Aim :
+### EX NO : 01
+### DATE  : 30.03.2022
+# <p align="center">Fitting Binomial Distribution</p>
+
+# Aim : 
+
 To fit binomial distribution for the given frequencey distribution
 
-image
+![image](https://user-images.githubusercontent.com/104613195/165903525-d4a642fc-ae42-476c-842f-bec7f72987c8.png)
 
-## Software required :
- Python
+# Software required :  
 
-## Theory:
+Python
+
+# Theory:
+
 The binomial distribution is a discrete probability distribution. It describes the outcome of n independent trials in an experiment. Each trial is assumed to have only two outcomes, either success or failure. If the probability of a successful trial is p, then the probability of having x successful outcomes in an experiment of n independent trials is as follows.
 
-image
+![image](https://user-images.githubusercontent.com/104613195/165905146-30e5b86e-4159-41a3-aa6d-885204c2e36a.png)
 
 The following are criteria for a frequency distribution to be a binomial distribution
+1. The experiment consists of n repeated trials.
+2. Each trial can result in just two possible outcomes (a success anda failure).
+3. The trials are independent (the outcome on one trial does not affect the outcome on other trials).
 
-The experiment consists of n repeated trials.
-Each trial can result in just two possible outcomes (a success anda failure).
-The trials are independent (the outcome on one trial does not affect the outcome on other trials).
-Procedure :
-image
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-## Program
-```
-Developed by
-Register Number: 212220230037
-Name: R K PRAVEEN
+# Procedure :
+
+![image](https://user-images.githubusercontent.com/104613195/166250867-46571ef5-f77b-4658-86ce-1c60c52fdfb1.png)
+
+# Program
+ Developed by <br>
+ Register Number: 212220230037 <br>
+ Name:R K PRAVEEN <br>
+```python
 import numpy as np
 import math
 import scipy.stats
@@ -41,7 +58,7 @@ print("  X P(X=x) Obs.Fr  Ex.Fre   xi ")
 print("----------------------------------")
 for x in range(7):
     c=math.factorial(n)/(math.factorial(x)*math.factorial(n-x))
-    Pr.append(c*p*x*q*(n-x))
+    Pr.append(c*p**x*q**(n-x))
     E.append(Pr[x]*N)
     xi.append((f[x]-E[x])**2/E[x])
     print("%2.2f %2.2f  %4.2f   %3.2f  %3.2f"%(x,Pr[x],f[x],E[x],xi[x]))
@@ -54,10 +71,13 @@ if cal_chi2<tab_chi2:
     print("The given data can be fitted in binomial distribution at 1% LOS")
 else:
     print("The given data cannot be fitted in binomial distribution at 1% LOS")
- ```
-## Output:
-![screen 33](https://user-images.githubusercontent.com/77062608/167775587-b7ef2197-87d1-492f-9e8a-bb7327d7157f.jpg)
+```
 
 
-## Results:
-Thus, fitting binomial distribution for the given frequencey distribution is verified.
+# Output : 
+![image](https://user-images.githubusercontent.com/75235488/168961860-672cd3af-74da-42b8-95fa-8e828205cd58.png)
+
+
+
+# Result:
+Thus, fitting poisson distribution for the given frequencey distribution is verified.
